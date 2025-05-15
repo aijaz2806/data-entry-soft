@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dawoodi Bohra Jamaat (Member Registration Form)</title>
+    
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .fade-in {
+            animation: fadeIn 1.2s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="custom-container">
+
+        <div id="logo-screen" class="bg-overlay">
+            <img src="assets/logo.png" alt="Logo" class="my-box">
+        </div>
+
+        <div id="form-container" class="heading-container">
+            <span class="main-title">DAWOODI BOHRA JAMAAT (Regd.)</span>
+            <span class="sub-title">Community Member Registration Form</span>        
+        </div>
+
+        <form id="user-form" style="margin-top: 1rem">
+            <div class="custom-grid">
+                <div class="form-group">
+                    <label for="dbjId">DBJ ID.</label>
+                    <input type="number" id="dbj-id" placeholder=" DBJ Id" class="custom-input"><br>
+                </div>
+
+                <!-- Envelop Number -->
+                <div class="form-group">
+                    <label for="envelopNo">Envelop No.</label>
+                    <input type="text" id="envelope-no" placeholder=" Envelope No." class="custom-input" list="envelopList">
+                    <datalist id="envelopList"></datalist>
+                </div>
+            
+                <!-- Form No. -->
+                <div class="form-group">
+                    <label for="formNo">Form No.</label>
+                    <input type="number" id="form-no" placeholder=" Form No."  class="custom-input">
+                </div>
+            </div>
+
+            <div class="custom-grid-three" style="padding: 1rem;">  
+                <!-- Aadhaar Number -->
+                <div class="AD-PAN-container">
+                  <label for="aadharNumber" class="aadhar-Pan">Aadhar Number <span class="mandatory">*</span></label>
+                  <input type="number" id="aadharCard-Number" placeholder=" AADHAR Card No." class="aadhar-input" required>
+                </div>
+            
+                <!-- Pan Card Number -->
+                <div class="AD-PAN-container">
+                  <label for="panCardNumber" class="aadhar-Pan">Pan Card Number <span class="mandatory">*</span></label>
+                  <input type="text" id="panCard-Number" placeholder=" PAN Card No." class="aadhar-input" required>
+                </div>
+            </div>
+
+            <hr style="border: 1px solid rgb(233, 194, 194)">
+
+            <!-- Personal Info. -->
+                <div class="custom-grid-two">
+                    <!-- Full Name -->
+                    <div class="form-group">
+                        <label for="full-name">Full Name <span class="mandatory">*</span></label>
+                        <input type="text" id="full-name" placeholder=" Full Name" list="nameList" required>
+                        <datalist id="nameList"></datalist>
+                    </div>
+            
+                    <!-- Father's Name -->
+                    <div class="form-group">
+                        <label for="father-name">Father's Name <span class="mandatory">*</span></label>
+                        <input type="text" id="father-name" placeholder=" Father's Name" list="fatherList" required>
+                        <datalist id="fatherList"></datalist>
+                    </div>
+            
+                    <!-- Mother's Name -->
+                    <div class="form-group">
+                        <label for="mother-name">Mother's Name <span class="mandatory">*</span></label>
+                        <input type="text" id="mother-name" placeholder=" Mother's Name" list="motherList" required>
+                        <datalist id="motherList"></datalist>
+                    </div>
+            
+                    <!-- HOF / Member -->
+                    <div class="form-group">
+                        <label for="hofMember">H.O.F / Member</label>
+                        <input type="text" id="hof" placeholder=" Head of Family" >
+                    </div>
+            
+                    <!-- Date of Birth -->
+                    <div class="form-group">
+                        <label for="dateOfBirth">Date of Birth <span class="mandatory">*</span></label>
+                        <input type="text" id="birthday" placeholder=" Date of Birth" required>
+                    </div>
+            
+                    <!-- Contact -->
+                    <div class="form-group">
+                        <label for="contact">Contact No. <span class="mandatory">*</span></label>
+                        <input type="text" id="contact" placeholder=" Contact Number" required>
+                    </div>
+                </div>
+
+                <div class="custom-grid-two">
+                    <!-- Family Name -->
+                    <div class="form-group">
+                      <label for="familyName">Family Name</label>
+                      <input type="text" id="family-name" placeholder=" Family Name" class="custom-input" list="familyList">
+                      <datalist id="familyList"></datalist>
+                    </div>
+                  
+                    <!-- Email -->
+                    <div class="form-group">
+                      <label for="email">Email ID</label>
+                      <input type="email" id="email" placeholder="Email" class="custom-input">
+                    </div>
+                       
+                    <!-- Sex Male/Female -->
+                    <div class="form-group">
+                        <label for="gender">Gender <span class="mandatory">*</span></label>
+                        <select id="gender" required> </select>
+                    </div>
+                </div>
+
+                <div class="custom-grid">  
+                    <!-- Spouse Name -->
+                    <div class="form-group">
+                      <label for="spouseName">Spouse Name</label>
+                      <input type="text" id="spouse-name" placeholder=" Spouse Name" class="custom-input" list="spouseList">
+                      <datalist id="spouseList"></datalist>
+                    </div>
+                  
+                    <!-- Relation with HOF -->
+                    <div class="form-group">
+                        <label for="relation-hof">Relation with H.O.F <span class="mandatory">*</span></label>
+                        <select id="relation-hof" required> </select>
+                    </div>
+                  
+                    <!-- Marital Stats -->
+                    <div class="form-group">
+                        <label for="maritalStatus">Marital Status <span class="mandatory">*</span></label>
+                        <select id="marital-Status" required> </select>
+                    </div>
+                
+                    <!-- Whats App No. -->
+                    <div class="form-group">
+                      <label for="whatsAppNumber">Whats App No. <span class="mandatory">*</span></label>
+                      <input type="text" id="whatsApp-Number" placeholder=" WhatsApp No." class="custom-input" required>
+                    </div>
+                
+                    <!-- Adress -->
+                    <div class="form-group">
+                      <label for="address">Address <span class="mandatory">*</span></label>
+                      <input type="textarea" id="address" placeholder=" Address" class="custom-input" required>
+                    </div>
+              
+                    <!-- Blood Group -->
+                    <div class="form-group">
+                        <label for="bloodGroup">Blood Group </label>
+                        <select id="bloodGroup"> </select>
+                    </div>
+                  
+                </div>
+            <!-- Personal Info End -->
+
+            <hr style="border: 1px solid rgb(233, 194, 194)">
+
+            <div class="custom-grid-two">
+                <!-- Education Level -->
+                <div class="form-group">
+                    <label for="education">Education Level</label>
+                    <input type="text" id="education" placeholder="Education">
+                    <!-- <select id="education"></select> -->
+                </div>
+              
+                <!-- Occupation -->
+                <div class="form-group">
+                    <label for="occupation">Occupation </label>
+                    <select id="occupation"></select>
+                </div>
+              
+                <!-- Annual Income -->
+                <div class="form-group">
+                    <label for="income">Annual Income</label>
+                    <select id="income"></select>
+                </div>
+            </div> 
+
+            <div class="custom-grid-two">
+                <!-- Area -->
+                <div class="form-group">
+                  <label for="area">Area <span class="mandatory">*</span></label>
+                  <input type="text" id="area" placeholder=" Area" class="custom-input" list="areaList" required>
+                  <datalist id="areaList"></datalist>
+                </div>
+          
+                <div class="form-group">
+                  <label for="subArea">Subarea <span class="mandatory">*</span></label>
+                  <input type="text" id="subArea" placeholder=" Sub-Area" class="custom-input" list="subareaList" required>
+                  <datalist id="subareaList"></datalist>
+                </div>
+              
+                <!-- Masjid -->
+                <div class="form-group">
+                    <label for="masjid">Masjid <span class="mandatory">*</span></label>
+                    <select id="masjid" placeholder="Select Masjid" required></select> 
+                </div>
+            
+            </div>
+
+            <div class="custom-grid-two">
+                <!-- Country -->
+                <div class="form-group">
+                  <label for="countries">Country <span class="mandatory">*</span></label>
+                  <input type="text" id="country" placeholder=" Country" class="custom-input" list="countryList" required>
+                  <datalist id="countryList"></datalist>  
+                </div>
+            
+                <!-- State -->
+                <div class="form-group">
+                  <label for="states">State </label>
+                  <input type="text" id="state" placeholder=" State" class="custom-input" list="stateList"> 
+                  <datalist id="stateList"></datalist>  
+                </div>
+            
+                <!-- City -->
+                <div class="form-group">
+                  <label for="city">City </label>
+                  <input type="text" id="city" class="custom-input" list="cityList">
+                  <datalist id="cityList"></datalist>  
+                </div>    
+            </div>
+            
+            <hr style="border: 1px solid rgb(233, 194, 194)">
+
+            <div style class="buttons-position">
+                <button type="submit" class="save-button" style="background-color: #43AA8B;">
+                  <i class="bi bi-file-spreadsheet" style="font-size: 2rem;"></i> Save to Excel
+                </button>
+            </div>
+        </form>
+    </div>
+    <script src="renderer.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(() => {
+                document.getElementById("logo-screen").style.display = "none";
+                document.getElementById("form-container").classList.remove("hidden");
+            }, 1000);
+        });
+
+        // const fields = ["name", "amount", "purpose"];
+        const fields = ["dbj-id", "envelope-no", "form-no", "aadharCard-Number", "panCard-Number", "full-name", "father-name", "mother-name", "hof", "birthday", "contact", "family-name", "email", "gender", "spouse-name", "relation-hof", "marital-Status", "whatsApp-Number", "address", "bloodGroup", "education", "occupation", "income", "area", "subArea", "masjid", "country", "state", "city"];
+
+        window.onload = () => {
+            fields.forEach(field => {
+                const datalist = document.getElementById(field + "List");
+                const items = JSON.parse(localStorage.getItem(field + "History") || "[]");
+                items.forEach(value => {
+                datalist.innerHTML += `<option value="${value}">`;
+                });
+            });
+        };
+
+        document.getElementById("user-form").addEventListener("submit", e => {
+            e.preventDefault();
+            fields.forEach(field => {
+                const value = document.getElementById(field).value.trim();
+                if (!value) return;
+
+                let history = JSON.parse(localStorage.getItem(field + "History") || "[]");
+                if (!history.includes(value)) {
+                history.push(value);
+                localStorage.setItem(field + "History", JSON.stringify(history));
+                }
+            });
+        });
+    </script>
+</body>
+</html>
